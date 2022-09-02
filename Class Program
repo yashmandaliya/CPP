@@ -1,0 +1,25 @@
+#include<iostream.h>
+#include<conio.h>
+class A1
+{
+	int a;
+	public:
+	void get()
+	{
+		cout<<"Enter A:";
+		cin>>a;
+	}
+	void put()
+	{
+		cout<<"\nA:"<<a;
+	}
+};
+int main()
+{
+	A1 x;
+	clrscr();
+	x.get();
+	x.put();
+	getch();
+	return 0;
+}
