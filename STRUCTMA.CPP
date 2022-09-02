@@ -1,0 +1,43 @@
+// Creating structure stud and input 2 member rollno,name and add 12 structure in first in add marks of three subject and find total and average marks and print result....
+
+#include<iostream.h>
+#include<conio.h>
+struct stud
+{
+	int rollno;
+	char name[30];
+};
+struct marks
+{
+	int m1,m2,m3;
+	int total;
+	float avg;
+	struct stud s1;
+};
+int main()
+{
+	struct marks s2;
+	int result;
+	clrscr();
+	cout<<"Enter Roll No:";
+	cin>>s2.s1.rollno;
+	cout<<"Enter Name:";
+	cin>>s2.s1.name;
+	cout<<"Enter CF,C++ And Oracle Marks:";
+	cin>>s2.m1>>s2.m2>>s2.m3;
+	cout<<"\nRollno:"<<s2.s1.rollno;
+	cout<<"\nName:"<<s2.s1.name;
+	cout<<"\n\nCF:"<<s2.m1<<"\tC++:"<<s2.m2<<"\tOracle:"<<s2.m3;
+	s2.total=0;
+	s2.total = s2.m1 + s2.m2 + s2.m3 ;
+	cout<<"\nTotal Marks Are:"<<s2.total;
+	s2.avg = s2.total / 3;
+	cout<<"\nAverage Marks Is:"<<s2.avg;
+	cout<<"\n";
+	cout<<"\n------------------------Result--------------------------";
+	cout<<endl;
+	cout<<"\nRollno\tName\tCF\tC++\tOracle\tTotal\tAverage";
+	cout<<"\n"<<s2.s1.rollno<<"\t"<<s2.s1.name<<"\t"<<s2.m1<<"\t"<<s2.m2<<"\t"<<s2.m3<<"\t"<<s2.total<<"\t"<<s2.avg;
+	getch();
+	return 0;
+}
