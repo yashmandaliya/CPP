@@ -1,0 +1,71 @@
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+class String
+{
+	int len;
+	char *nm;
+	public:
+	String();
+	String(char *s);
+	void display();
+	String operator +(String s1);
+	friend int operator ==(String s1,String s2);
+};
+String::String()
+{
+	len = 0;
+	nm = new char[len+1];
+}
+String::String(char *s)
+{
+	len = strlen(s);
+	nm = new char [len+1];
+	strcpy(nm,s);
+}
+void String::display()
+{
+	cout<<"\n	Name = "<<nm;
+}
+String String::operator +(String s1)
+{
+	String s2;
+	s2.len = len + s1.len;
+	s2.nm =new char [s2.len + 1];
+	strcpy(s2.nm,nm);
+	strcat(s2.nm,s1.nm);
+	return(s2);
+}
+int operator ==(String s1,String s2)
+{
+	if(strcmp(s1.nm,s2.nm)==0)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+void main()
+{
+	char nm1[20],nm2[20];
+	clrscr();
+	cout<<"\nEnter Two String:";
+	cin>>nm1>>nm2;
+	String s1(nm1),s2(nm2),s3;
+	s3 = s1+s2;
+	void display();
+	s1.display();
+	s2.display();
+	s3.display();
+	if(s1 == s2)
+	{
+		cout<<"\nBoth strings are same";
+	}
+	else
+	{
+		cout<<"\nBoth strings are not same";
+	}
+	getch();
+}
