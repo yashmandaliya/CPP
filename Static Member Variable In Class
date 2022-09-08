@@ -1,0 +1,36 @@
+#include<iostream.h>
+#include<conio.h>
+class A
+{
+	int a;
+	static int x;
+	public:
+	void get();
+	void put();
+};
+void A::get()
+{
+	cout<<"Enter A:";
+	cin>>a;
+	x++;
+}
+void A::put()
+{
+	cout<<"A="<<a;
+	cout<<"\nX="<<x;
+	cout<<endl;
+}
+int A::x;
+void main()
+{
+	A a1,a2,a3;
+	clrscr();
+	a1.get();
+	a1.put();
+	a2.get();
+	a2.put();
+	a3.get();
+	a3.put();
+	a1.put();
+	getch();
+}
