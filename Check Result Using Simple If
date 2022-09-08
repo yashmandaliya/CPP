@@ -1,0 +1,42 @@
+// Here I Print Result Using Simple If Print Pass,Fail And A.T.K.T Result.........
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+	int m1,m2,m3;
+	clrscr();
+	cout<<"Enter Mark Of Sad:\n";
+	cin>>m1;
+	cout<<"Enter Mark Of Oracle:\n";
+	cin>>m2;
+	cout<<"Enter Mark Of Wordpress:\n";
+	cin>>m3;
+	cout<<endl;
+	cout<<"SAD= "<<m1;
+	cout<<endl;
+	cout<<"ORACLE= "<<m2;
+	cout<<endl;
+	cout<<"WORDPRESS= "<<m3;
+	if(m1>40 && m2>40 && m3>40)
+	{
+		cout<<endl;
+		cout<<"Pass !!";
+	}
+	cout<<"\n";
+	if(m1<40 && m2<40 && m3<40)
+	{
+		cout<<endl;
+		cout<<"Fail !!";
+	}
+	if(m1>=75 && m2>=75 && m3>=75)
+	{
+		cout<<endl;
+		cout<<"Distinction !!";
+	}
+	if(m1>=40 && m2>=40 && m3<40 || m1 < 40 && m2 >=40 && m3>=40 || m1>=40 && m2<40 && m3>=40 || m1 < 40 && m2<40 && m3>=40 || m1<40 && m2 >=40 && m3<40 || m1>=40 && m2<40 && m3<40)
+	{
+		cout<<endl;
+		cout<<"A.T.K.T";
+	}
+	getch();
+}
