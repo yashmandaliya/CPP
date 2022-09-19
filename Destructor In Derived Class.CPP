@@ -5,7 +5,7 @@
 class A
 {
 	public:
-	~A()
+	A()
 	{
 		cout<<"\nDefault Constructor";
 	}
@@ -13,7 +13,7 @@ class A
 class B:public A
 {
 	public:
-	B()
+	~B()
 	{
 		cout<<"\nDestructor Is Called";
 	}
