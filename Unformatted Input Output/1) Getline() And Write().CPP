@@ -3,22 +3,27 @@
 #include<string.h>
 void main()
 {
-	char *s1="Computer";
-	int l1,i;
+	char s[17];
 	clrscr();
-	l1 = strlen(s1);
-	for(i=0;i<l1;i++)
-	{
-		cout.write(s1,i);
-		cout<<endl;
-	}
-	for(i=l1;i>0;i--)
-	{
-		cout.write(s1,i);
-		cout<<endl;
-	}
+	cout<<'Enter Line Of Text:";
+	cin.getline(s,17);
+	cout<<"\nLine Of text Is;";
+	cout.write(s,17);
 	getch();
 }
+
+/* 
+Output:-
+
+Enter Line Of text: Yash Mandaliya
+Line Of Text Is:
+
+After Click Alt + F5 In Turbo C
+
+Enter Line Of text: Yash Mandaliya
+Line Of Text Is:Yash Mandaliya
+
+*/
 
 
 
